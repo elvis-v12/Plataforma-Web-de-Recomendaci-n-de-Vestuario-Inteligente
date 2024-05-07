@@ -17,7 +17,7 @@ $_SESSION['usuario']=$correo;
     echo '
     <script>
     alert("Usuario no existe, por favor verificar sus datos");
-   window.location="../IngresoLoginIngreso.php";
+   window.location="../LoginIngreso.php";
     </script>
     ';
     exit;
