@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="Login_bm">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
         <div class="from_box login">
           <h2>Login</h2>
           <form action="#" >
