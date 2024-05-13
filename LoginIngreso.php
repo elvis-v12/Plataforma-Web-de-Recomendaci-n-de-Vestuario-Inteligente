@@ -27,21 +27,23 @@
     </div>
     <!--Fomulario de registro login-->
    <div class="contenedor__login-registrar">
-    <!--login-->
-    <form action="php/login_usuario_be.php" method="POST" class="formulario__login">
-        <h2>Inciar Sesion</h2>
-        <input type="text" placeholder="Correo electronico" name="correo">
-        <input type="password" placeholder="Contraseña" name=contrasena>
-        <button>Entrar</button>
-    </form>
+    <!-- Formulario de inicio de sesión -->
+<form action="php/login_usuario_be.php" method="POST" class="formulario__login">
+    <h2>Iniciar Sesión</h2>
+    <input type="text" placeholder="Correo electrónico" name="correo">
+    <input type="password" placeholder="Contraseña" name="contrasena">
+    <button type="submit">Entrar</button>
+</form>
+
     <!-- Registro -->
-    <form action="php/registro_usuario_be.php" method="POST" class="formulario__registrar">
-<h2>Registrarte</h2>
-<input type="text" placeholder="Nombre completo" name="nombre_completo">
-<input type="text" placeholder="Correo electronico" name="correo">
-<input type="text" placeholder="Usuario" name="usuario">
-<input type="password" placeholder="Contraseña" name="contrasena">
-<button>Registrarme</button>
+     <!-- Formulario de Registro -->
+     <form action="php/registro_usuario_be.php" method="POST" class="formulario__registrar">
+        <h2>Registrarte</h2>
+        <input type="text" placeholder="Nombre completo" name="nombre_completo">
+        <input type="text" placeholder="Correo electronico" name="correo">
+        <input type="text" placeholder="Usuario" name="usuario">
+        <input type="password" placeholder="Contraseña" name="contrasena">
+        <button type="submit">Registrarme</button>
     </form>
    </div>
 </div>

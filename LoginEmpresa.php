@@ -1,41 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingreso Gestion de inventario</title>
-   <link rel="stylesheet" href="Estilos/StyleLoginEmpresa.css">
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="Estilos/StyleLogin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Validacion de clientes</title>
 </head>
 <body>
-    <div class="Login_bm">
-        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
-        <div class="from_box login">
-          <h2>Login</h2>
-          <form action="#" >
-            <div class="input-box">
-                <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                <input type="email" required>
-                 <label for="">Email</label>
-            </div>
-            <div class="input-box">
-                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                <input type="contraseña" required>
-                 <label for="">Contraseña</label>
-            </div>
-            <div class="remenber-forg">
-                <label><input type="checkbox"> Remmenber me</label>
-                <a href="#">Forgot Password?</a>
-            </div>
-            <button type="submit" class="btn">Ingresar</button>
-            <div class="login_register">
-                <p>Dont't have an account<a href="#" class="register_link">Register</a></p>
-            </div>
-          </form>
-        </div>
+     <main>
+<div class="contenedor__todo">
+    <div class="caja__trasera">
+<div class="caja__trasera--login">
+    <h3>¿Eres administrador de la empresa?</h3>
+    <p>Inicia sesion con tu cuenta de empleado para ingresar al sistema</p>
+    <button id="btn__iniciar-sesion">Iniciar Sesion</button>
+</div>
     </div>
-    <script src="Scripts/ComponentesjsLoginEmpresa.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!--Fomulario de registro login-->
+   <div class="contenedor__login-registrar">
+    <!-- Formulario de inicio de sesión -->
+<form action="php/validarTrabajador.php" method="POST" class="formulario__login">
+    <h2>Iniciar Sesión</h2>
+    <input type="text" placeholder="Usuario" name="correo">
+    <input type="password" placeholder="Contraseña" name="contrasena">
+    <button type="submit">Entrar</button>
+</form>
+   </div>
+</div>
+     </main>
+     <script src="Scripts/ComponentesjsLoginEmpresa.js"></script>
 </body>
 </html>

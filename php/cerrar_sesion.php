@@ -1,5 +1,5 @@
 <?php
 session_start();
   session_destroy();
-  header("location: ../IngresoLoginIngreso.php")
+  header("location: ../LoginIngreso.php")
 ?>
