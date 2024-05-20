@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CarpiShop</title>
+    <title>STYLEGENIE</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="Estilos/StyleTienda.css">
@@ -13,7 +13,7 @@
 
     <div class="wrapper">
         <header class="header-mobile">
-            <h1 class="logo">CarpiShop</h1>
+            <h1 class="logo">STYLEGENIE</h1>
             <button class="open-menu" id="open-menu">
                 <i class="bi bi-list"></i>
             </button>
@@ -23,12 +23,12 @@
                 <i class="bi bi-x"></i>
             </button>
             <header>
-                <h1 class="logo">CarpiShop</h1>
+                <h1 class="logo">STYLEGENIE</h1>
             </header>
             <nav>
                 <ul>
                     <li>
-                        <a class="boton-menu boton-volver" href="./index.php">
+                        <a class="boton-menu boton-volver" href="./Cataloco_de_Productos.php">
                             <i class="bi bi-arrow-return-left"></i> Seguir comprando
                         </a>
                     </li>
@@ -40,7 +40,7 @@
                 </ul>
             </nav>
             <footer>
-                <p class="texto-footer">© 2024 StyleGenaly</p>
+                <p class="texto-footer">© 2024 STYLEGENIE</p>
             </footer>
         </aside>
         <main>

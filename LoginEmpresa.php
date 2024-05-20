@@ -17,7 +17,6 @@
 <div class="caja__trasera--login">
     <h3>¿Eres administrador de la empresa?</h3>
     <p>Inicia sesion con tu cuenta de empleado para ingresar al sistema</p>
-    <button id="btn__iniciar-sesion">Iniciar Sesion</button>
 </div>
     </div>
     <!--Fomulario de registro login-->

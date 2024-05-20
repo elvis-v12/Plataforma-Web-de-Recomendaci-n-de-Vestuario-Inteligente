@@ -15,7 +15,7 @@ if ($resultado && mysqli_num_rows($resultado) > 0) {
     if (password_verify($contrasena, $usuario['contrasena'])) {
         // Contraseña correcta, iniciar sesión
         $_SESSION['usuario'] = $correo;
-        header("location: ../index.php");
+        header("location: ../Cataloco_de_Productos.php");
         exit;
     } else {
         // Contraseña incorrecta
