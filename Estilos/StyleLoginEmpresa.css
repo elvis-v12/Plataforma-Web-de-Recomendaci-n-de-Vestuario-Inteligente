@@ -1,143 +1,104 @@
-*{
-    padding:0 ;
+
+/* Reset some default styles */
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
-    text-decoration: none;
-}
-body{
-    background-color: #000;
 }
 
-.Login_bm{
-
-    position:relative;
-    width: 400px;
-    height: 400px;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-    display:flex;
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #6a6f88;
-    margin: auto;
+    height: 100vh;
+    background: #f3f4f6;
+}
+
+main {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     overflow: hidden;
 }
-.Login_bm .from_box {
- width: 100%;
- padding: 40px;
-}
-.Login_bm .icon-close{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45px;
-    height: 45px;
-    background-color: #162938;
-    font-size: 2em;
-    color: #fff;
+
+.contenedor__todo {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    border-bottom-left-radius: 20px;
-    cursor: pointer;
-    z-index: 1;
+    padding: 20px;
 }
-.Login_bm
 
-.from_box h2{
-    font-size: 2em;
-    color:#162938;
+.caja__trasera {
     text-align: center;
-}
-.input-box{
-    position: relative;
-    height: 50px;
-    width: 100%;
-    border-bottom: 2px solid #162938;
-    margin: 30px 0;
-}
-.input-box input:focus~label,
-.input-box input:valid~label{
-    top: -5px;
+    margin-bottom: 20px;
 }
 
-.input-box label{
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: 1em;
-    color: #162938;
-    font-weight: 500;
-    pointer-events: none;
-    transition: .5s;
-}
-.input-box input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    color: #162938;
-    font-weight: 600;
-    padding: 0 35px 0 5px;
-}
-.input-box  .icon{
-    position: absolute;
-    right: 8px;
+.caja__trasera--login h3 {
     font-size: 1.2em;
-    color: #162938;
-    line-height: 57px;
+    margin-bottom: 10px;
 }
-.remenber-forg{
-    font-size: .9em;
-    color: #162938;
-    font-weight: 500;
-    margin: -15px 0 15px;
-    display: flex;
-    justify-content: space-between;
+
+.caja__trasera--login p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
 }
-.remenber-forg label input{
-    accent-color: #162938;
-    margin-right: 3px;
-}
-.remenber-forg a{
-    color: #162938;
-    text-decoration: none;
-}
-.remenber-forg a:hover{
-    text-decoration: underline;
-}
-.btn{
-    width: 100%;
-    height: 45px;
-    background: #162938;
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
+
+#btn__iniciar-sesion {
+    padding: 10px 20px;
     font-size: 1em;
-    color:#fff;
-    font-weight: 500;
-    
+    color: #fff;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
-.login_register{
-    font-size: .9em;
-    color: #162938;
-    text-align: center;
-    font-weight: 500;
-    margin: 25px 0 10px;
+
+#btn__iniciar-sesion:hover {
+    background: #0056b3;
 }
-.login_register p  a{
-    color: #162938;
-    text-decoration: none;
-    font-weight: 600;
+
+.contenedor__login-registrar {
+    width: 100%;
 }
-.login_register p a:hover{
-    text-decoration: underline;
+
+.formulario__login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario__login h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.formulario__login input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.formulario__login button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    color: #fff;
+    background: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.formulario__login button:hover {
+    background: #218838;
 }

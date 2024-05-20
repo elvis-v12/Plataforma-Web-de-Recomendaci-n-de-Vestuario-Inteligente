@@ -47,7 +47,7 @@
                 </ul>
             </nav>
             <footer>
-                <p class="texto-footer">© 2022 Carpi Coder</p>
+                <p class="texto-footer">© 2024 StyleGenaly</p>
             </footer>
         </aside>
         <main>
