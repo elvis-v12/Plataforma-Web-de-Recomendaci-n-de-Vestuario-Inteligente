@@ -1,13 +1,22 @@
- document.getElementById("btn__registrarse").addEventListener('click',registrar)
- document.getElementById("btn__iniciar-sesion").addEventListener( "click", IniciarSesion); 
+
+//Configuración de eventos
+
+document.getElementById("btn__registrarse").addEventListener('click',registrar)
+document.getElementById("btn__iniciar-sesion").addEventListener( "click", IniciarSesion); 
 window.addEventListener("resize",nachoPagina);
-/*Variables*/
+
+
+// DECLARACION DE VARIABLES
+
 var formulario_login_registro=document.querySelector('.contenedor__login-registrar');
 var formulario_login=document.querySelector('.formulario__login');
 var formulario_registro=document.querySelector('.formulario__registrar');
 var caja_tracera_login=document.querySelector('.caja__trasera--login');
 var caja_tracera_registro=document.querySelector('.caja__tracera--registrar');
-/*Funciones*/
+
+
+//FUNCIONES
+
 
 function nachoPagina(){
     if(window.innerWidth >850){
@@ -61,3 +70,51 @@ function registrar(){
 }
 
 
+
+
+function mostrarSiguiente() {
+    if (validarDatosPersonales()) {
+        var paso1 = document.getElementById('Registro_Personal');
+        var paso2 = document.getElementById('Registro_Cuenta');
+        // Oculta el primer y ejecuta el 2do
+        paso1.style.display = 'none';
+        paso2.style.display = 'block';
+    }
+}
+
+
+function validarDatosPersonales() {
+
+     // Definir correctamente la variable emailField
+    
+    var dni = document.querySelector('[name="dni"]').value;
+    var nombre = document.querySelector('[name="nombre"]').value;
+    var apellido = document.querySelector('[name="apellido"]').value;
+    var telefono = document.querySelector('[name="telefono"]').value;
+    var direccion = document.querySelector('[name="direccion"]').value;
+    var correo = document.querySelector('[name="correo"]').value;
+    var genero = document.querySelector('[name="genero"]').value;
+    var fechaNacimiento = document.querySelector('[name="fechaNacimiento"]').value;
+
+   
+    //Validacion if
+    if (dni && nombre && apellido && telefono && direccion && correo && genero && fechaNacimiento) {
+        return true;
+    } else {
+        alert("Por favor, rellene todos los campos");
+        return false;
+    }
+}
+
+function validarDatosUsuario() {
+    var username = document.querySelector('[name="usuario"]').value;
+    var contrasena = document.querySelector('[name="contrasena"]').value;
+
+    //Validacion
+    if (username && contrasena) {
+        return true;
+    } else {
+        alert("Rellene todos los campos");
+        return false;
+    }
+}
