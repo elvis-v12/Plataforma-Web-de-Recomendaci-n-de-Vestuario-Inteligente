@@ -39,20 +39,31 @@
                     
                 <!-- Registro -->
                 <!-- Formulario de Registro -->
-                <form method="POST" class="formulario__registrar">
-                    <h2>Registrarte</h2>
-                    <input type="text" placeholder="Nombre(s)" name="nombre_completo">
-                    <input type="text" placeholder="Apellido(s)" name="apellido">
-                    <input type="text" placeholder="Teléfono" name="telefono">
-                    <input type="text" placeholder="Dirección" name="direccion">
-                    <input type="text" placeholder="Correo Electrónico" name="correo">
-                    <select>
-                        <Option>Masculino</Option>
-                        <Option>Femenino</Option>
-                        <Option>Otro</Option>
+                <form id="Formulario_Registro" action="php/registro_usuario_be.php" method="POST"
+                    class="formulario__registrar">
+                    <h2>Información personal</h2>
+                    <div id="Registro_Personal">
+                    <input type="text" placeholder="DNI" name="dni" required>
+                    <input type="text" placeholder="Nombre(s)" name="nombre_completo" required>
+                    <input type="text" placeholder="Apellido(s)" name="apellido" required>
+                    <input type="text" placeholder="Teléfono" name="telefono" required>
+                    <input type="text" placeholder="Dirección" name="direccion" required>
+                    <input type="email" placeholder="Correo Electrónico" name="correo" required>
+                    <select name="genero" required>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
                     </select>
-                    <input type="text" placeholder="Fecha de Nacimiento" name="fechaNacimiento">
-                    <button type="submit" name="registrar">Registrarme</button>
+
+                    <input type="date" placeholder="Fecha de Nacimiento" name="fechaNacimiento" required>
+                    <button type="botton" onclick="mostrarSiguiente()"> Siguiente</button>
+                    </div>
+                    <div id="Registro_Cuenta" style="display:none;">
+                            <h2>Crea tu usuario</h2>
+                            <input type="text" placeholder="Username" name="usuario" required/>
+                            <input type="password" placeholder="Contraseña" name="contraseña" required/>
+                            <button type="summit" name="registrar">Registrarme</button>
+                        </div>
                 </form>
             </div>
         </div>

@@ -1,13 +1,45 @@
 <?php
 include 'conexion_be.php';
 
-$nombre_completo = $_POST['nombre_completo'];
-$correo = $_POST['correo'];
-$usuario = $_POST['usuario'];
-$contrasena = $_POST['contrasena'];
+if (isset($_POST['registrar'])) {
+    $dni = trim($_POST['dni']);
+    $nombre_completo= trim($_POST['nombre_completo']);
+    $apellido = trim($_POST['apellido']);
+    $telefono = trim($_POST['telefono']);
+    $direccion = trim($_POST['direccion']);
+    $correo = trim($_POST['correo']);
+    $genero = trim($_POST['genero']);
+    $fechaNacimiento = trim($_POST['fechaNacimiento']);
+    $usuario = trim($_POST['usuario']);
+    $contrasenha = trim($_POST['contraseña']);
+    $fechaRegistro = date("y/m/d");
+    //SQL    
 
+    $consulta = "call crearCuentaCliente('$dni','$nombre_completo','$apellido','$telefono',
+                '$direccion','$correo','$genero','$usuario','$contrasenha','$fechaNacimiento',
+                '$fechaRegistro')";
+    $resultado = mysqli_query($conexion, $consulta);
+    if ($resultado) {
+        echo '<h3>EL REGISTRO SE HIZO CORRECTAMENTE</h3>';
+    }else{
+        echo '<h3>OCURRIO UN ERROR: ' . mysqli_error($conexion) . '</h3>';
+
+    }
+
+}else{
+    echo '<h3>POR FAVOR COMPLETE LOS CAMPOS</h3>';
+
+}
+
+
+
+
+
+
+
+/*
 // Hashear la contraseña antes de almacenarla en la base de datos
-$contrasena_hasheada = password_hash($contrasena, PASSWORD_DEFAULT);
+$contrasenaHasheada = hash('sha256', $contrasena);
 
 $query = "INSERT INTO usuarios (nombre_completo, correo, usuario, contrasena)
           VALUES ('$nombre_completo', '$correo', '$usuario', '$contrasena_hasheada')";
@@ -38,4 +70,5 @@ if ($ejecutar) {
 }
 
 mysqli_close($conexion);
+*/
 ?>
